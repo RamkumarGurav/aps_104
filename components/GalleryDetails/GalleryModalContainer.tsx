@@ -55,7 +55,7 @@ export default function GalleryModalContainer({
                 <Image
                   key={i}
                   src={`${item.imageUrl}`}
-                  alt="my image"
+                  alt="school"
                   width={700}
                   height={500}
                   className="min-w-full md:w-[650px] h-[250px] sm:h-[400px] object-contain"
