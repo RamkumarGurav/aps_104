@@ -20,46 +20,34 @@ export const metadata: Metadata = {
  ****************************************************/
 export default function Page() {
   return (
-    <div className="w-[100%] overflow-hidden">
-      <div
-        className="flex flex-col gap-4 justify-center items-center w-full h-[170px] bg-cover"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../inner2.jpg')",
-        }}
-      >
-        <Skeleton className="w-[120px] h-[40px] " />
-        <div className="flex gap-4 justify-center items-center text-gray-200">
-          <Skeleton className="w-[50px] h-[20px] " />
-          -
-          <Skeleton className="w-[50px] h-[20px] " />
-          -
-          <Skeleton className="w-[50px] h-[20px] " />
-        </div>
+    <div className="w-[100%] overflow-hidden p-8  ||  flex flex-col gap-4 justify-center items-center text-white">
+      <div className="max-w-md bg-blue-500 ">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+        cumque labore tenetur eos cum minima consequatur quisquam temporibus
+        aspernatur similique quas fugiat dolorum sapiente veritatis nostrum a
+        sit, rem natus accusamus sint delectus, asperiores incidunt sunt?
+        Reiciendis, dolorum error. Quisquam ducimus soluta, odio, minus ut
+        repudiandae, vel laudantium excepturi optio unde dolore officia debitis
+        quidem nesciunt ipsa consequatur aperiam itaque nulla quibusdam eius?
+        Inventore fugit labore at est saepe voluptas repudiandae consectetur
+        quaerat incidunt aspernatur? Labore neque, saepe quas amet eos
+        laudantium mollitia officia minus rerum! Velit blanditiis atque aut. Eum
+        ad tenetur repudiandae in atque, nihil nesciunt quam nisi?
       </div>
 
-      <section id="albums" className="albumsShell py-20 pt-10 px-2 sm:px-12 ">
-        <div className="|| xspring300pxFromLeft15">
-          <div
-            className="text-lg sm:text-xl md:text-2xl xl:text-4xl text-start font-bold text-gray-900 mb-4
-           "
-          >
-            <Skeleton className="w-[300px] h-[50px] " />
-          </div>
-          <div className="w-[100px] border-b-[3px] border-red-500"></div>
+      <blockquote className="text-2xl font-semibold italic text-center text-slate-900">
+        When you look
+        <span className="before:block before:absolute mx-2 before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+          <span className="relative text-white ">annoyed</span>
+        </span>
+        all the time, people think that you're busy.
+      </blockquote>
+      <div className="relative bg-red-400 p-8">
+        <div className="absolute -inset-2 bg-blue-500"></div>
+        <div className="relative z-10">
+          Content above the positioned element.
         </div>
-
-        <div className=" mt-4  grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, i) => (
-            <div
-              key={i}
-              className="xspringTrans300pxFromBelow10 rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]"
-            >
-              <Skeleton className=" h-[280px]" />
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
