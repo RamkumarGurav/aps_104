@@ -1,14 +1,25 @@
 "use client";
-
-import { AnimatePresence, motion } from "framer-motion";
+/*** nextjs ***/
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import Image from "next/image";
-import Modal from "@/components/GalleryDetails/Modal";
+/*** packages ***/
+import { AnimatePresence, motion } from "framer-motion";
+/*** images ***/
 import sports1 from "@/public/sports/1.jpg";
 import sports2 from "@/public/sports/2.jpg";
 import sports3 from "@/public/sports/3.jpg";
+/*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
-import Carousel from "./Carousel";
+/*** components-d ***/
+const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
+const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+  ssr: false,
+});
+
+/*****************************************************
+           component
+*****************************************************/
 export default function ScienceLabModalContainer() {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(16);

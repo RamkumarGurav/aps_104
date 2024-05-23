@@ -1,11 +1,10 @@
 "use client";
-
-import { useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-hot-toast";
-import ReCAPTCHA from "react-google-recaptcha";
-import ContactForm from "./ContactForm";
-
+/*** nextjs ***/
+import dynamic from "next/dynamic";
+import { useState } from "react";
+// import ContactForm from "./ContactForm";
+/*** dynmic import  ***/
+const ContactForm = dynamic(() => import("./ContactForm"), { ssr: false });
 export default function SideEnquire({
   admissionYear,
 }: {

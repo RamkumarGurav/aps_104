@@ -11,7 +11,9 @@ import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
 import AnimatedTitle from "@/components/Animated/AnimatedDiv";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function CHMPageName() {
   return (
     <div className={`bg-[#FDFBF0] overflow-hidden ${font.className}`}>

@@ -10,8 +10,9 @@ import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedTd from "@/components/Animated/AnimatedTd";
 import AnimatedTh from "@/components/Animated/AnimatedTh";
-
-export default function PageName() {
+/*****************************************************
+           page
+*****************************************************/ export default function PageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="Academic Calender" />

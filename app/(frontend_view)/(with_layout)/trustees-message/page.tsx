@@ -10,7 +10,9 @@ import nabeelaImg from "@/public/nabeela.jpg";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function TMPageName() {
   return (
     <div className={` ${font.className} bg-[#FDFBF0] overflow-hidden`}>

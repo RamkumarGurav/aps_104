@@ -2,7 +2,7 @@
 /*** nextjs ***/
 import { useState } from "react";
 import Image from "next/image";
-
+import dynamic from "next/dynamic";
 /*** images ***/
 import scienceLab1 from "@/public/science-lab/5.jpg";
 import scienceLab2 from "@/public/science-lab/6.jpg";
@@ -12,9 +12,13 @@ import scienceLab5 from "@/public/science-lab/03.jpg";
 import scienceLab6 from "@/public/science-lab/4.jpg";
 /*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
-import Carousel from "./Carousel";
-import InfraGalleryCarousel from "./Carousel";
-import Modal from "@/components/GalleryDetails/Modal";
+/*** dynamic components ***/
+const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
+const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+  ssr: false,
+});
+
+/**************************************************
 /*** packages ***/
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -30,13 +34,12 @@ export default function ScienceLabModalContainer() {
   return (
     <>
       <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
-        <div className="bg-white w-full  flex items-center justify-center">
+        <div className="relative bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring" }}
             viewport={{ once: true, amount: 0.1 }}
-            id="image-container"
             onClick={() => {
               setCurrentIndex(10);
               return modalOpen ? close() : open();
@@ -62,7 +65,6 @@ export default function ScienceLabModalContainer() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring" }}
             viewport={{ once: true, amount: 0.1 }}
-            id="image-container"
             onClick={() => {
               setCurrentIndex(11);
               return modalOpen ? close() : open();
@@ -88,7 +90,6 @@ export default function ScienceLabModalContainer() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring" }}
             viewport={{ once: true, amount: 0.1 }}
-            id="image-container"
             onClick={() => {
               setCurrentIndex(12);
               return modalOpen ? close() : open();
@@ -114,7 +115,6 @@ export default function ScienceLabModalContainer() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring" }}
             viewport={{ once: true, amount: 0.1 }}
-            id="image-container"
             onClick={() => {
               setCurrentIndex(13);
               return modalOpen ? close() : open();
@@ -140,7 +140,6 @@ export default function ScienceLabModalContainer() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring" }}
             viewport={{ once: true, amount: 0.1 }}
-            id="image-container"
             onClick={() => {
               setCurrentIndex(14);
               return modalOpen ? close() : open();
@@ -159,6 +158,7 @@ export default function ScienceLabModalContainer() {
           </motion.div>
         </div>
       </div>
+
       <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
@@ -166,7 +166,6 @@ export default function ScienceLabModalContainer() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring" }}
             viewport={{ once: true, amount: 0.1 }}
-            id="image-container"
             onClick={() => {
               setCurrentIndex(15);
               return modalOpen ? close() : open();

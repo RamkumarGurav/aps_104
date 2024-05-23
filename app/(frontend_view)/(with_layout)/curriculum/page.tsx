@@ -1,8 +1,5 @@
 /*** nextjs ***/
 import Image from "next/image";
-/*** fonts ***/
-import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
 /*** images ***/
 import knowledgeCenter1 from "@/public/knowledge-center/1.jpg";
 /*** icons ***/
@@ -12,7 +9,9 @@ import { curriculumDetails } from "@/lib/helpers/displayData";
 import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function CPageName() {
   return (
     <div className={`  bg-[#FDFBF0] overflow-hidden`}>

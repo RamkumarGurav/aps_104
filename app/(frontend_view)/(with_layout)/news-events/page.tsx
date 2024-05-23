@@ -7,12 +7,13 @@ import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedTd from "@/components/Animated/AnimatedTd";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function NEPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="News and Events" pageName1="News and Events" />
-
       <section
         className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
       >

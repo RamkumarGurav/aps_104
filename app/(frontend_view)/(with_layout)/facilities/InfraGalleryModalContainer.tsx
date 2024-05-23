@@ -1,10 +1,11 @@
 "use client";
-
-import { AnimatePresence, motion } from "framer-motion";
+/*** nextjs ***/
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import Image from "next/image";
-import Carousel from "./Carousel";
-import Modal from "@/components/GalleryDetails/Modal";
+/*** packages ***/
+import { AnimatePresence, motion } from "framer-motion";
+/*** images ***/
 import infra1 from "@/public/infrastructure/1.jpg";
 import infra2 from "@/public/infrastructure/2.jpg";
 import infra3 from "@/public/events-img-1.jpg";
@@ -13,8 +14,17 @@ import infra5 from "@/public/events-img-3.jpg";
 import infra6 from "@/public/events-img-4.jpg";
 import infra7 from "@/public/sports/2.jpg";
 import infra8 from "@/public/sports/1.jpg";
+/*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
+/*** components-d ***/
+const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
+const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+  ssr: false,
+});
 
+/*****************************************************
+           component
+*****************************************************/
 export default function XInfraGalleryModalContainer() {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);

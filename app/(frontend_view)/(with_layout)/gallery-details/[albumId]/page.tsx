@@ -10,6 +10,7 @@ import GalleryModalContainer from "@/components/GalleryDetails/GalleryModalConta
 import VideoCard from "@/components/GalleryDetails/VideoCard";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import AlbumsContainer from "./AlbumsContainer";
 
 const beBaseUrl = "http://mars-1002/xampp/MARS/rest_ci_api_100/";
 const feBaseUrl = "http://mars-1002:3001/";
@@ -67,24 +68,24 @@ export default async function Gallery({
   return (
     <div className="w-[100%] overflow-hidden">
       <Bedcrumb heading="Gallery" pageName1={`Gallery - ${albumData.name}`} />
-      <div className="flex justify-center items-start p-4">
+      {/* <div className="flex justify-center items-start p-4">
         <p>{timeVar}</p>
-      </div>
-      <section id="albums" className="albumsShell py-20 px-2 sm:px-12 ">
+      </div> */}
+      <section id="albums" className="albumsShell py-20 pt-10 px-2 sm:px-12 ">
         <AnimatedDiv
           initial={{ opacity: 0, x: "50vw" }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 120, duration: 1 }}
           viewport={{ once: true, amount: 0 }}
         >
-          <div className="text-lg sm:text-xl md:text-2xl xl:text-4xl text-start font-bold text-gray-900 mb-4">
+          <div className="text-2xl sm:text-3xl lg:text-4xl text-start font-bold text-gray-900 mb-4">
             {albumData.name} &nbsp;
             <span className="text-secondary-red1">{yearData.fiscal_year}</span>
           </div>
           <div className="w-[100px] border-b-[3px] border-red-500"></div>
         </AnimatedDiv>
-
-        <div className=" mt-4  grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+        <AlbumsContainer data={albumsBlurDataUrl} yearData={yearData} />
+        {/* <div className=" mt-4  grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
           {albumsBlurDataUrl &&
             albumsBlurDataUrl?.map(
               (item: { [key: string]: any }, i: number) => (
@@ -101,7 +102,7 @@ export default async function Gallery({
                 </div>
               )
             )}
-        </div>
+        </div> */}
 
         <div className="w-full mt-4   grid md:grid-cols-2  gap-4  gap-y-8 place-content-center place-items-start">
           {filteredVideos.map((item: { [key: string]: any }, i: number) => (
@@ -112,7 +113,7 @@ export default async function Gallery({
     </div>
   );
 }
-
+/*** not found page  ***/
 export async function generateStaticParams() {
   const albums = await fetchAlbums();
   return albums.map((album: { [key: string]: any }) => ({

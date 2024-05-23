@@ -10,7 +10,7 @@ import GalleryCard from "@/components/Gallery/GalleryCard";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 
-/*** helpers ***/
+/*** util functions ***/
 async function fetchData(fy: string | number) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/albums?fy=${fy}`
@@ -56,10 +56,10 @@ export default async function Gallery({
   return (
     <div className="w-[100%] overflow-hidden">
       <Bedcrumb heading="Gallery" pageName1={`Gallery`} />
-      <div className="flex justify-center items-start p-4">
+      {/* <div className="flex justify-center items-start p-4">
         <p>{timeVar}</p>
-      </div>
-      <section id="albums" className="albumsShell py-20 px-2 sm:px-12 ">
+      </div> */}
+      <section id="albums" className="albumsShell py-20 pt-10 px-2 sm:px-12 ">
         <AnimatedDiv
           initial={{ opacity: 0, x: "50vw" }}
           whileInView={{ opacity: 1, x: 0 }}

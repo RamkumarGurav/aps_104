@@ -215,6 +215,10 @@
   }
 }
 
+.xspringTrans300pxFromBelow10 {
+  animation: 1s xspringTrans300pxFromBelow15
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 .xspringTrans300pxFromBelow15 {
   animation: 1.5s xspringTrans300pxFromBelow15
     cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -313,6 +317,18 @@
 }
 .xtweenTrans300pxFromLeft20 {
   animation: 2s xtweenTrans300pxFromLeft15;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: 0%;
+  }
+}
+.customShimmer {
+  background: linear-gradient(-45deg, #eef 40%, #fafafa 50%, #eef 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  animation: shimmer 1s infinite linear;
 }
 
 /* =======================================================================

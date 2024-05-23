@@ -18,7 +18,9 @@ import {
 import AnimatedText from "@/components/Animated/AnimatedText";
 import { missionStatements, visionStatement } from "@/lib/helpers/displayData";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function MVPageName() {
   return (
     <div

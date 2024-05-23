@@ -9,7 +9,9 @@ import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import { docsRequired } from "@/lib/helpers/displayData";
 import AnimatedButton from "@/components/Animated/AnimatedButton";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function APPageName() {
   return (
     <>

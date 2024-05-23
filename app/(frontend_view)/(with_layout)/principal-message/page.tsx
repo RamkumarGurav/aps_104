@@ -1,8 +1,5 @@
 /*** nextjs ***/
 import Image from "next/image";
-/*** fonts ***/
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
 /*** images ***/
 import sreelakshmi from "@/public/sreelakshmi.jpg";
 /*** components ***/
@@ -12,6 +9,9 @@ import AnimatedTitle from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 
+/*****************************************************
+           page
+*****************************************************/
 export default function PMPageName() {
   return (
     <div className="bg-[#FDFBF0] overflow-hidden">

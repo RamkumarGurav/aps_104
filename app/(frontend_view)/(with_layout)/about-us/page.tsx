@@ -16,7 +16,9 @@ import {
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function AUPageName() {
   return (
     <div className={`${font.className}  relative z-[1] overflow-hidden`}>

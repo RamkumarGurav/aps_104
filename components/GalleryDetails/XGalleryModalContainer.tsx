@@ -5,6 +5,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 /*** packages ***/
 import { AnimatePresence, motion } from "framer-motion";
+import { Dialog } from "../ui/dialog";
 /*** components ***/
 // import Modal from "./Modal";
 // import GalleryCarousel from "../Carousels/GalleryCarousel";
@@ -19,7 +20,7 @@ const GalleryCarousel = dynamic(() => import("../Carousels/GalleryCarousel"), {
 /*****************************************************
            Component
 *****************************************************/
-export default function GalleryModalContainer({
+export default function XGalleryModalContainer({
   data,
   keyIndex,
   srcUrl,
@@ -58,7 +59,7 @@ export default function GalleryModalContainer({
       </motion.div>
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {modalOpen && (
-          <Modal modalOpen={modalOpen} handleClose={close}>
+          <Dialog>
             <GalleryCarousel slides={data} currentIndex={keyIndex}>
               {data.map((item: { [key: string]: any }, i: number) => (
                 //width and height attributes are not real width and heights of the image
@@ -76,7 +77,7 @@ export default function GalleryModalContainer({
                 />
               ))}
             </GalleryCarousel>
-          </Modal>
+          </Dialog>
         )}
       </AnimatePresence>
     </div>

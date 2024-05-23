@@ -2,9 +2,6 @@
 
 /*** nextjs ***/
 import { useRef, useState } from "react";
-/*** fonts ***/
-import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
 /*** icons ***/
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
@@ -17,17 +14,11 @@ import {
   tweenAnimateFromLeft10,
   tweenAnimateFromLeft13,
   tweenAnimateFromLeft16,
-  tweenAnimateFromRight10,
-  tweenAnimateFromRight13,
-  tweenAnimateFromRight16,
-  tweenAnimateFromRight19,
 } from "@/lib/helpers/variants";
-import LoadingButton from "@/components/Buttons/LoadingButton";
 /*** packages ***/
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
-import { motion } from "framer-motion";
 import EnquireForm from "@/components/Forms/EnquireForm";
 
 const sendData = async (data: any) => {

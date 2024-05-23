@@ -2,15 +2,18 @@
 /*** nextjs ***/
 import { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 /*** images ***/
 import transport1 from "@/public/transport/1.jpg";
 import transport2 from "@/public/transport/2.jpg";
 import transport3 from "@/public/transport/3.jpg";
 /*** components ***/
-import Modal from "@/components/GalleryDetails/Modal";
-
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
-import Carousel from "./Carousel";
+/*** components-d ***/
+const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
+const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+  ssr: false,
+});
 /*** packages ***/
 import { AnimatePresence, motion } from "framer-motion";
 

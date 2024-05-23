@@ -9,7 +9,9 @@ import AnimatedTd from "@/components/Animated/AnimatedTd";
 import AnimatedTh from "@/components/Animated/AnimatedTh";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import { schoolTimingsDetails } from "@/lib/helpers/displayData";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function SMPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>

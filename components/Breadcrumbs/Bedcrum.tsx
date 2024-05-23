@@ -12,7 +12,8 @@ export default function Bedcrumb({
 }) {
   return (
     <div
-      className={`bedcrumb ${font.className} flex flex-col justify-center items-center h-[140px]   sm:h-[170px] bg-cover`}
+      className={`bedcrumb ${font.className} flex flex-col justify-center items-center 
+      ||  h-[140px]   sm:h-[170px] bg-cover`}
       style={{
         backgroundImage:
           "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../inner2.jpg')",

@@ -1,8 +1,5 @@
 /*** nextjs ***/
 import Image from "next/image";
-/*** fonts ***/
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
 /*** images ***/
 import vc from "@/public/vc.jpg";
 /*** components ***/
@@ -10,7 +7,9 @@ import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function VCPageName() {
   return (
     <div className="bg-[#FDFBF0] overflow-hidden">

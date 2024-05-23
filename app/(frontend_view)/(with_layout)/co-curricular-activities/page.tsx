@@ -13,7 +13,9 @@ import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedText from "@/components/Animated/AnimatedText";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
-
+/*****************************************************
+           page
+*****************************************************/
 export default function CCAPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>

@@ -1,13 +1,22 @@
 "use client";
-
-import { AnimatePresence, motion } from "framer-motion";
+/*** nextjs ***/
 import { useState } from "react";
 import Image from "next/image";
-import InfraGalleryCarousel from "./Carousel";
-import Modal from "@/components/GalleryDetails/Modal";
+import dynamic from "next/dynamic";
+/*** packages ***/
+import { AnimatePresence, motion } from "framer-motion";
+/*** images ***/
 import knowledgeCentre1 from "@/public/knowledge-center/1.jpg";
 import knowledgeCentre2 from "@/public/knowledge-center/2.jpg";
+/*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
+/*** components-d ***/
+const InfraGalleryCarousel = dynamic(() => import("./Carousel"), {
+  ssr: false,
+});
+const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+  ssr: false,
+});
 export default function KCModalContainer() {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(8);
